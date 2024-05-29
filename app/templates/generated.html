@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div id="generated" class="col-6">
+        <h2>Generated Images</h2>           
+        {% for item in context %}
+        <button style="text-decoration: none; border:none; background:none;" onclick="showModal('{{ item }}')" data-bs-toggle="modal" data-bs-target="#imgModal">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename = item) }}" class="img-fluid rounded-start" alt="{{ item.replace("_", " ").split(".")[0] | title }}">
+                    </div>
+                    <div class="justify-content-center col-md-8">
+                        <div class="card-body ">
+                            <h5 class="card-title">{{ item.replace("_", " ").split(".")[0] | title }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </button>
+        {% endfor %}
+    </div>
+{% endblock %}

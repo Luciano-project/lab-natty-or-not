@@ -23,29 +23,21 @@ Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisicu
 # Título do Projeto Extremamente Aesthetic ;)
 
 ## 📒 Descrição
-Breve descrição do seu projeto
+Uma api de geração de Imagens apartir de um prompt em texto
 
 ## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
+Aqui foi utilizado a infraestrutura da plataforma REPPLICATE e o Flask para criação da API (em python). 
 
 ## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
+A partir da documentação da plataforma REPLICATE, criei uma API (utilizando o framework Flask) com uma interface gráfica em que é possivel visualizar as imagens e escrever o prompt desejado por meio de um input e depois enviar para o endpoint no qual será utilizado para gerar a imagem. 
 
 ## 🚀 Resultados
-Apresente os resultados do seu projeto
+Depois da geração da imagem ela é salva pela aplicação python e recebe o prompt como nome, é salvo o registro numa base de dados sqlite e, por fim, exibido uma lista das predições feitas pelo usuário de forma visual. 
 
-## 💭 Reflexão (Opcional)
-Comente sobre o desafio de criar algo 'natty' com IA.
-```
+## Ressalvas
+1. Para iniciar a Aplicação é necessáario que você tenha uma conta no replicate e uma chave para fazer uso da API da plataforma. 
 
-### Exemplos e Insigths
+    a. A senha deve ser salva num arquivo .env (variável como constante REPLICATE_API_TOKEN = '#sua chave aqui').
+    
+    b. instalação dos pacotes necessários em requirements.txt ou basta rodar o install_requirements.py, mas também pode ser feita manualmente (caso você não utilize o windows). 
 
-- [E-BOOK](/exemplos/E-BOOK.md)
-- [Podcast](/exemplos/PODCAST.md)
-- [Vídeo (Avatar Virtual)](/exemplos/VIDEO.md)
-
-## Links Interessantes
-
-[Base10: If You’re Not First, You’re Last: How AI Becomes Mission Critical](https://base10.vc/post/generative-ai-mission-critical/)
-
-![Base10's Trend Map Generative AI](https://github.com/digitalinnovationone/lab-natty-or-not/assets/730492/f4df26e8-f8f7-4419-8252-c69d73ea930c)
